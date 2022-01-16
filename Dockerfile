@@ -11,7 +11,7 @@ RUN apt-get install -qy nodejs
 
 # Setting up NodeJs
 RUN npm install -g npm@7.24.2
-RUN npm install -g jest-puppeteer puppeteer jest
+RUN npm install -g jest-puppeteer puppeteer-core jest
 
 # Command prompt
 CMD /bin/bash
