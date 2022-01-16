@@ -1,16 +1,11 @@
-FROM ubuntu:21.10
+FROM ubuntu:18.04
 
 ARG DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && \
-    apt-get install -qy curl wget gnupg2 && \
-    apt-get install -qy openjdk-11-jre-headless maven
-
-RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
-    && echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list
-# Install Chrome.
-RUN apt-get update && apt-get -y install google-chrome-stable fonts-ipafont-gothic fonts-wqy-zenhei fonts-thai-tlwg fonts-kacst fonts-freefont-ttf libxss1 --no-install-recommends
-
+    apt-get install -qy curl && \
+    apt-get install -qy openjdk-11-jre-headless maven chromium-browser
+    
 RUN curl -sL https://deb.nodesource.com/setup_16.x | sh
 RUN apt-get install -qy nodejs
 
