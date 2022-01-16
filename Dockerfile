@@ -3,7 +3,7 @@ FROM ubuntu:21.10
 ARG DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && \
-    apt-get install -qy curl && \
+    apt-get install -qy curl wget && \
     apt-get install -qy openjdk-11-jre-headless maven
 
 RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
