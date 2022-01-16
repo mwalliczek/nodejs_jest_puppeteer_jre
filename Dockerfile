@@ -11,7 +11,8 @@ RUN apt-get install -qy nodejs
 
 # Setting up NodeJs
 RUN npm install -g npm@7.24.2
-RUN npm install -g jest-puppeteer puppeteer-core jest
+ARG PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
+RUN npm install -g jest-puppeteer puppeteer jest
 
 # Command prompt
 CMD /bin/bash
