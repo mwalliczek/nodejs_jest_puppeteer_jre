@@ -7,5 +7,5 @@ Ubuntu based `Docker` image for running apps that need `Java`, `Maven`, `NodeJS`
 In your `Dockerfile`:
 
 ```docker
-FROM mwalliczek/nodejs_jest_puppeteer_jre:latest
+FROM mwalliczek/nodejs_maven_jre_chromium:latest
 ```
