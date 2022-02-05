@@ -10,7 +10,7 @@ RUN curl -sL https://deb.nodesource.com/setup_16.x | sh
 RUN apt-get install -qy nodejs
 
 # Setting up NodeJs
-RUN npm install -g npm@7.24.2
+RUN npm install -g npm@8.3.1
 
 # Command prompt
 CMD /bin/bash
